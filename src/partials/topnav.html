@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg @@if(navColor=='default' && !demoMode){navbar-light}@@if(navColor=='inverted' &&!demoMode){}@@if(navColor=='vibrant' && !demoMode){navbar-dark bg-vibrant}" id="topnav">
+  <div class="container">
+
+    <!-- Toggler -->
+    <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Brand -->
+    <a class="navbar-brand mr-auto" href="index.html">
+      <img src="@@webRoot/assets/img/logo.svg" alt="..." class="navbar-brand-img">
+    </a>
+
+
+    <!-- User -->
+    <div class="navbar-user">
+     
+
+      <!-- Dropdown -->
+      <div class="dropdown">
+        
+        <!-- Toggle -->
+        <a href="#" class="avatar avatar-sm avatar-online dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="@@webRoot/assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+        </a>
+
+        <!-- Menu -->
+        <div class="dropdown-menu dropdown-menu-right">
+          <a href="sign-in.html" class="dropdown-item">Logout</a>
+        </div>
+
+      </div>
+
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse mr-auto order-lg-first" id="navbar">
+
+      <!-- Navigation -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link @@if(category=='dashboards'){active}" href="index.html" id="topnavDashboards" role="button" aria-haspopup="true" aria-expanded="false">
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link @@if(category=='pages'){active}" href="profile-projects.html" id="topnavPages" role="button" aria-haspopup="true" aria-expanded="false">
+            My Properties
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link @@if(category=='settings'){active}" href="settings.html"  role="button" aria-haspopup="true" aria-expanded="false">
+            Settings
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+  </div> <!-- / .container -->
+</nav>
