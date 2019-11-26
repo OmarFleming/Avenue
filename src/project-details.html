@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "title": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+      @@if (sidebarSize == 'base' || demoMode) {
+        @@include("partials/sidebar.html", {
+          "category": "pages",
+          "subcategory": "project",
+          "page": "project-new.html"
+        })
+      }
+      @@if (sidebarSize == 'small' || demoMode) {
+        @@include("partials/sidebar-sm.html", {
+          "category": "pages",
+          "subcategory": "project",
+          "page": "project-new.html"
+        })
+      }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+      @@include("partials/topnav.html", {
+        "category": "pages",
+        "subcategory": "project",
+        "page": "project-new.html"
+      })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+      }
+
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+            
+            <!-- Header -->
+            <div class="header mt-md-5">
+              <div class="header-body">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h1 class="header-title">
+                      Property Details
+                    </h1>
+
+                  </div>
+	              <div class="col-auto">
+                
+	                <!-- Button -->
+	                <a href="project-overview.html" class="btn btn-block btn-primary mb-2">
+	                  Update
+	                </a>
+
+	              </div>
+                </div> <!-- / .row -->
+              </div>
+            </div>
+			
+            
+
+            <!-- Form -->
+            <form class="mb-4">
+
+
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  
+                  <!-- Start date -->
+                  <div class="form-group">
+                    <label>
+                      Address
+                    </label>
+                    <input type="text" class="form-control" placeholder="Enter an address">
+                  </div>
+
+                </div>
+                <div class="col-12 col-md-6">
+                  
+                  <!-- Start date -->
+                  <div class="form-group">
+                    <label>
+                      Address 2
+                    </label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                </div>
+              </div> <!-- / .row -->
+			  
+              <div class="row">
+                <div class="col-12 col-md-4">
+                  
+                  <!-- Start date -->
+                  <div class="form-group">
+                    <label>
+                      City
+                    </label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                </div>
+                <div class="col-12 col-md-4">
+                  
+                  <!-- Start date -->
+                  <div class="form-group">
+                    <label>
+                      County
+                    </label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                </div>
+                <div class="col-12 col-md-4">
+                  
+                  <!-- Start date -->
+                  <div class="form-group">
+                    <label>
+                      Post code
+                    </label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                </div>
+              </div> <!-- / .row -->
+
+              <!-- Divider -->
+              <hr class="mt-5 mb-5">
+			  
+              <div class="row">
+				  
+                <div class="col-12 col-md-4">
+                  
+	              <div class="form-group">
+	                <label>
+	                  Ownership
+	                </label>
+					<select class="form-control" data-toggle="select" data-options='{"placeholder": "Freehold or Leasehold"}'>
+					  <option></option>
+					  <option>Freehold</option>
+					  <option>Leasehold</option>
+					</select>
+	              </div>
+
+                </div>
+				
+                <div class="col-12 col-md-4">
+                  
+                  <!-- Start date -->
+                  <div class="form-group">
+                    <label>
+                      Purchase Price
+                    </label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                </div>
+                <div class="col-12 col-md-4">
+                  
+                  <!-- Start date -->
+                  <div class="form-group">
+                    <label>
+                      Purchase Date
+                    </label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                </div>
+              </div> <!-- / .row -->
+			  
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  
+	              <div class="form-group">
+	                <label>
+	                  Property Type
+	                </label>
+					<select class="form-control" data-toggle="select" data-options='{"placeholder": "Select a property type"}'>
+					  <option></option>
+					  <option>Detached House</option>
+					  <option>Semi Detached House</option>
+					  <option>Terraced House</option>
+					  <option>Flat</option>
+					</select>
+	              </div>
+
+                </div>
+                <div class="col-12 col-md-6">
+                  
+	              <div class="form-group">
+	                <label>
+	                  Construction Date
+	                </label>
+					<select class="form-control" data-toggle="select" data-options='{"placeholder": "When"}'>
+					  <option></option>
+					  <option>Pre-1914</option>
+					  <option>Between 1914-2000</option>
+					  <option>2000 onwards</option>
+					</select>
+	              </div>
+
+                </div>
+              </div> <!-- / .row -->
+			  
+			  
+              <div class="row">
+                <div class="col-12 col-md-4">
+                  
+                  <div class="form-group">
+                    <label>
+                      Bedrooms
+                    </label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                </div>
+				
+                <div class="col-12 col-md-4">
+                  
+                  <div class="form-group">
+                    <label>
+                      Bedrooms
+                    </label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                </div>
+				
+                <div class="col-12 col-md-4">
+                  
+	              <div class="form-group">
+	                <label>
+	                  Finish Quality
+	                </label>
+					<select class="form-control" data-toggle="select" data-options='{"placeholder": "Choose"}'>
+					  <option></option>
+					  <option>Very High</option>
+					  <option>High</option>
+					  <option>Average</option>
+					  <option>Below Average</option>
+					  <option>Unmodernised</option>
+					</select>
+	              </div>
+
+                </div>
+				
+				
+              </div> <!-- / .row -->
+			  
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  
+                  <!-- Start date -->
+                  <div class="form-group">
+                    <label>
+                      Internal Square Feet
+                    </label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                </div>
+                <div class="col-12 col-md-6">
+                  
+	              <div class="form-group">
+	                <label>
+	                  Outdoor Space
+	                </label>
+					<select class="form-control" data-toggle="select" data-options='{"placeholder": "Choose"}'>
+					  <option></option>
+					  <option>None</option>
+					  <option>Balcony Terrace</option>
+					  <option>Garden</option>
+					  <option>Garden (Large)</option>
+					</select>
+	              </div>
+
+                </div>
+              </div> <!-- / .row -->
+			
+			  
+              <!-- Divider -->
+              <hr class="mt-5 mb-5">
+
+              <!-- Buttons -->
+              <a href="#" class="btn btn-block btn-danger">
+                Remove property
+              </a>
+
+            </form>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+      
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

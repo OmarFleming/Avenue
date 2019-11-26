@@ -11,17 +11,170 @@
       <img src="@@webRoot/assets/img/logo.svg" alt="..." class="navbar-brand-img">
     </a>
 
+    <!-- Form -->
+    <form class="form-inline mr-4 d-none d-lg-flex">
+      <div class="input-group input-group-rounded input-group-merge" data-toggle="lists" data-options='{"valueNames": ["name"]}'>
+
+        <!-- Input -->
+        <input type="search" class="form-control form-control-prepended  dropdown-toggle search" data-toggle="dropdown" placeholder="Search" aria-label="Search">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fe fe-search"></i>
+          </div>
+        </div>
+
+        <!-- Menu -->
+        <div class="dropdown-menu dropdown-menu-card">
+          <div class="card-body">
+
+            <!-- List group -->
+            <div class="list-group list-group-flush list my-n3">
+              <a href="team-overview.html" class="list-group-item px-0">
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    
+                    <!-- Avatar -->
+                    <div class="avatar avatar-4by3">
+                      <img src="assets/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
+                    </div>
+
+                  </div>
+                  <div class="col ml-n2">
+
+                    <!-- Title -->
+                    <h4 class="text-body mb-1 name">
+                      29 Tythe Barn Lane
+                    </h4>
+
+                    <!-- Time -->
+                    <p class="small text-muted mb-0">
+                      <time datetime="2018-05-24">Semi Detached House</time>
+                    </p>
+                    
+                  </div>
+                </div> <!-- / .row -->
+              </a>
+              <a href="team-overview.html" class="list-group-item px-0">
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    
+                    <!-- Avatar -->
+                    <div class="avatar avatar-4by3">
+                      <img src="assets/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
+                    </div>
+
+                  </div>
+                  <div class="col ml-n2">
+
+                    <!-- Title -->
+                    <h4 class="text-body mb-1 name">
+                      43 Regent Street
+                    </h4>
+
+                    <!-- Time -->
+                    <p class="small text-muted mb-0">
+                      <time datetime="2018-05-24">Flat</time>
+                    </p>
+                    
+                  </div>
+                </div> <!-- / .row -->
+              </a>
+              <a href="project-overview.html" class="list-group-item px-0">
+
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    
+                    <!-- Avatar -->
+                    <div class="avatar avatar-4by3">
+                      <img src="assets/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
+                    </div>
+
+                  </div>
+                  <div class="col ml-n2">
+
+                    <!-- Title -->
+                    <h4 class="text-body mb-1 name">
+                      55 Dover Street
+                    </h4>
+
+                    <!-- Time -->
+                    <p class="small text-muted mb-0">
+                      <time datetime="2018-05-24">Detached house</time>
+                    </p>
+                    
+                  </div>
+                </div> <!-- / .row -->
+
+              </a>
+              
+            </div>
+          
+          </div>
+        </div> <!-- / .dropdown-menu -->
+
+      </div>
+    </form>
 
     <!-- User -->
     <div class="navbar-user">
-     
+      
+      <!-- Dropdown -->
+      <div class="dropdown mr-4 d-none d-lg-flex">
+        
+        <!-- Toggle -->
+        <a href="#" class="navbar-user-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="icon">
+            <i class="fe fe-bell"></i>
+          </span>
+        </a>
+
+        <!-- Menu -->
+        <div class="dropdown-menu dropdown-menu-right dropdown-menu-card">
+          <div class="card-header">
+            <div class="row align-items-center">
+              <div class="col">
+                
+                <!-- Title -->
+                <h5 class="card-header-title">
+                  Notifications
+                </h5>
+
+              </div>
+            </div> <!-- / .row -->
+          </div> <!-- / .card-header -->
+          <div class="card-body">
+
+            <!-- List group -->
+            <div class="list-group list-group-flush my-n3">
+              <a class="list-group-item text-reset px-0" href="#!">
+              
+                <div class="row">
+
+                  <div class="col ml-n2">
+                    
+                    <!-- Content -->
+                    <div class="small">
+                      No notifications
+                    </div>
+
+                  </div>
+                </div> <!-- / .row -->
+
+              </a>
+              
+            </div>
+            
+          </div>
+        </div> <!-- / .dropdown-menu -->
+
+      </div>
 
       <!-- Dropdown -->
       <div class="dropdown">
         
         <!-- Toggle -->
-        <a href="#" class="avatar avatar-sm avatar-online dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <img src="@@webRoot/assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+        <a href="#" class="avatar avatar-sm avatar dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="@@webRoot/assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img">
         </a>
 
         <!-- Menu -->
@@ -31,8 +184,15 @@
 
       </div>
 
+    </div>
+
     <!-- Collapse -->
     <div class="collapse navbar-collapse mr-auto order-lg-first" id="navbar">
+
+      <!-- Form -->
+      <form class="mt-4 mb-3 d-md-none">
+        <input type="search" class="form-control form-control-rounded" placeholder="Search" aria-label="Search">
+      </form>
 
       <!-- Navigation -->
       <ul class="navbar-nav mr-auto">
