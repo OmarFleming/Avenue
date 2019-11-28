@@ -77,12 +77,12 @@
 	                <!-- Nav -->
 	                <ul class="nav nav-tabs nav-overflow header-tabs">
 	                  <li class="nav-item">
-	                    <a href="project-details.html" class="nav-link active">
+	                    <a href="project-details.html" class="nav-link">
 	                      Address Details
 	                    </a>
 	                  </li>
 	                  <li class="nav-item">
-	                    <a href="project-fdetails.html" class="nav-link">
+	                    <a href="project-fdetails.html" class="nav-link active">
 	                      Further Details
 	                    </a>
 	                  </li>
@@ -97,26 +97,41 @@
 
             <!-- Form -->
             <form class="mb-4">
-
-
+			  
               <div class="row">
-                <div class="col-12 col-md-6">
+				  
+                <div class="col-12 col-md-4">
+                  
+	              <div class="form-group">
+	                <label>
+	                  Ownership
+	                </label>
+					<select class="form-control" data-toggle="select" data-options='{"placeholder": "Freehold or Leasehold"}'>
+					  <option></option>
+					  <option>Freehold</option>
+					  <option>Leasehold</option>
+					</select>
+	              </div>
+
+                </div>
+				
+                <div class="col-12 col-md-4">
                   
                   <!-- Start date -->
                   <div class="form-group">
                     <label>
-                      Address
+                      Purchase Price
                     </label>
-                    <input type="text" class="form-control" placeholder="Enter an address">
+                    <input type="text" class="form-control">
                   </div>
 
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-4">
                   
                   <!-- Start date -->
                   <div class="form-group">
                     <label>
-                      Address 2
+                      Purchase Date
                     </label>
                     <input type="text" class="form-control">
                   </div>
@@ -125,40 +140,114 @@
               </div> <!-- / .row -->
 			  
               <div class="row">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6">
                   
-                  <!-- Start date -->
-                  <div class="form-group">
-                    <label>
-                      City
-                    </label>
-                    <input type="text" class="form-control">
-                  </div>
+	              <div class="form-group">
+	                <label>
+	                  Property Type
+	                </label>
+					<select class="form-control" data-toggle="select" data-options='{"placeholder": "Select a property type"}'>
+					  <option></option>
+					  <option>Detached House</option>
+					  <option>Semi Detached House</option>
+					  <option>Terraced House</option>
+					  <option>Flat</option>
+					</select>
+	              </div>
 
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6">
                   
-                  <!-- Start date -->
-                  <div class="form-group">
-                    <label>
-                      County
-                    </label>
-                    <input type="text" class="form-control">
-                  </div>
-
-                </div>
-                <div class="col-12 col-md-4">
-                  
-                  <!-- Start date -->
-                  <div class="form-group">
-                    <label>
-                      Post code
-                    </label>
-                    <input type="text" class="form-control">
-                  </div>
+	              <div class="form-group">
+	                <label>
+	                  Construction Date
+	                </label>
+					<select class="form-control" data-toggle="select" data-options='{"placeholder": "When"}'>
+					  <option></option>
+					  <option>Pre-1914</option>
+					  <option>Between 1914-2000</option>
+					  <option>2000 onwards</option>
+					</select>
+	              </div>
 
                 </div>
               </div> <!-- / .row -->
+			  
+			  
+              <div class="row">
+                <div class="col-12 col-md-4">
+                  
+                  <div class="form-group">
+                    <label>
+                      Bedrooms
+                    </label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                </div>
+				
+                <div class="col-12 col-md-4">
+                  
+                  <div class="form-group">
+                    <label>
+                      Bedrooms
+                    </label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                </div>
+				
+                <div class="col-12 col-md-4">
+                  
+	              <div class="form-group">
+	                <label>
+	                  Finish Quality
+	                </label>
+					<select class="form-control" data-toggle="select" data-options='{"placeholder": "Choose"}'>
+					  <option></option>
+					  <option>Very High</option>
+					  <option>High</option>
+					  <option>Average</option>
+					  <option>Below Average</option>
+					  <option>Unmodernised</option>
+					</select>
+	              </div>
+
+                </div>
+				
+				
+              </div> <!-- / .row -->
+			  
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  
+                  <!-- Start date -->
+                  <div class="form-group">
+                    <label>
+                      Internal Square Feet
+                    </label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                </div>
+                <div class="col-12 col-md-6">
+                  
+	              <div class="form-group">
+	                <label>
+	                  Outdoor Space
+	                </label>
+					<select class="form-control" data-toggle="select" data-options='{"placeholder": "Choose"}'>
+					  <option></option>
+					  <option>None</option>
+					  <option>Balcony Terrace</option>
+					  <option>Garden</option>
+					  <option>Garden (Large)</option>
+					</select>
+	              </div>
+
+                </div>
+              </div> <!-- / .row -->
+			
 			  
               <!-- Divider -->
               <hr class="mt-5 mb-5">
