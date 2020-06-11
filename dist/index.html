@@ -30,17 +30,17 @@
           <div class="collapse navbar-collapse justify-content-end">
             <div class="py-2 py-lg-0">
               <ul class="navbar-nav">
-                <li class="nav-item dropdown">
+                <li class="nav-item">
                   <a href="#" class="nav-link" aria-expanded="false" aria-haspopup="true">How it works?</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
                   <a href="#" class="nav-link" aria-expanded="false" aria-haspopup="true">Blog</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
                   <a href="#" class="nav-link" aria-expanded="false" aria-haspopup="true">Support</a>
                 </li>
               </ul>
-            </div><a href="#" class="btn btn-primary ml-lg-3">Log In</a>
+            </div><a href="http://app.myavenue.co" class="btn btn-primary ml-lg-3">Log In</a>
 
           </div>
         </div>
@@ -54,8 +54,8 @@
             <h1 class="display-4">The smart way to manage your property portfolio</h1>
             <p class="lead">Cloud-based technology that allows you to effortlessly track and manage your property portfolio in one place</p>
             <div class="d-flex flex-column flex-sm-row justify-content-center mt-4">
-				 <input type="email" class="form-control form-control-lg mr-sm-2 mb-2 mb-sm-0" placeholder="Your email address">
-              <a href="#" class="btn btn-lg btn-primary mx-2 mb-2 mb-sm-0">Get Started</a>
+				 <input type="email" class="form-control form-control-lg mr-sm-2 mb-2 mb-sm-0 user-email" placeholder="Your email address">
+              <a href="javascript::void(0)" class="btn btn-lg btn-primary mx-2 mb-2 mb-sm-0 btn-started">Get Started</a>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@
               </div>
               <h4>Add your properties</h4>
               <p>
-                Visualise your portfolio in a beautiful dashboard
+                Visualise your entire portfolio in a beautiful dashboard
               </p>
             </div>
           </div>
@@ -106,7 +106,7 @@
               </div>
               <h4>Grow your portfolio</h4>
               <p>
-                Use analytics to help your optimise and grow your portfolio
+                Tools to help your optimise and grow your portfolio
               </p>
             </div>
           </div>
@@ -122,46 +122,47 @@
           </div>
           <div class="col-lg-5 col-md-6" data-aos="fade-left">
             <h3 class="h2">Your portfolio at a glance.</h3>
-            <p class="lead">Avenue provides you with a holostic view of your entire property portfolio at your fingertips, with a simple and easy to understand dashboard.</p>
+            <p class="lead">Avenue provides you with a holostic view of your entire property portfolio. Keep track of its performance with a simple and easy to use dashboard.</p>
 
           </div>
         </div>
       </div>
     </section>
-    <section class="has-divider">
+    <section>
       <div class="container">
         <div class="row align-items-center justify-content-around flex-row-reverse o-hidden">
           <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-left">
-            <img src="assets/img/feature2.1.png" alt="Image" class="rounded">
+            <img src="assets/img/feature2new.png" alt="Image" class="rounded">
           </div>
           <div class="col-lg-5 col-md-6" data-aos="fade-right">
-            <h3 class="h2">Be an informed investor</h3>
-            <p class="lead">Keep track of how your portfolio is performing and drill down to see individual property performance. Become a more informed investor with Avenue.</p>
+            <h3 class="h2">Management made easy</h3>
+            <p class="lead">Ditch the spreadsheets and switch to Avenue. You can easily manage all property-related finances, documentation and keep track of tenancies in one place. </p>
           </div>
         </div>
       </div>
     </section>
-    <section class="has-divider">
+    <section>
       <div class="container">
         <div class="row align-items-center justify-content-around o-hidden">
           <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-right">
-            <img src="assets/img/feature3.2.png" alt="Image" class="rounded">
+            <img src="assets/img/feature3.2new.png" alt="Image" class="rounded">
           </div>
           <div class="col-lg-5 col-md-6" data-aos="fade-left">
-            <h3 class="h2">Access services</h3>
-            <p class="lead">The control centre for your properties. Get access to built-in analytics such as real-time valulations and rent estimates, and many more services to come...</p>
+            <h3 class="h2">Discover investments</h3>
+            <p class="lead">Find your next property investment on Avenue. We search through platforms like Rightmove and Zoopla everyday to find you the best deals and deliver them to you.
+</p>
           </div>
         </div>
       </div>
     </section>
 	
-    <section class="bg-primary-3 text-light has-divider jarallax" data-jarallax-video="https://vimeo.com/417307071"
+    <section class="text-light jarallax" data-jarallax-video="https://vimeo.com/417307071"
   data-speed="1">
       <div class="container">
         <div class="row justify-content-center text-center min-vh-50 align-items-center">
           <div class="col-xl-8 col-lg-9 col-md-10">
             <h2 class="display-4">Powered by data</h4>
-            <p class="lead">Powerful analyics provided by over 20+ sources to give you the best insights into your property portfolio</p>
+            <p class="lead">Powerful analytics provided by over 20+ sources to give you the best insights into your property portfolio</p>
           </div>
         </div>
       </div>
@@ -353,7 +354,16 @@
     <script type="text/javascript" src="assets/js/theme.js"></script>
     <!-- Removes page load animation when window is finished loading -->
     <script type="text/javascript">
-      window.addEventListener("load", function () {    document.querySelector('body').classList.add('loaded');  });
+      window.addEventListener("load", function () {    
+        document.querySelector('body').classList.add('loaded');  
+        $(".btn-started").click(function(e) {
+          e.preventDefault()
+          if (!$('.user-email').val()) {
+            return
+          }
+          location.href = 'http://localhost:3002/signin?' + $('.user-email').val()
+        })
+      });
     </script>
 
   </body>
