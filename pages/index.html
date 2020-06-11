@@ -62,8 +62,8 @@
             <h1 class="display-4">The smart way to manage your property portfolio</h1>
             <p class="lead">Cloud-based technology that allows you to effortlessly track and manage your property portfolio in one place</p>
             <div class="d-flex flex-column flex-sm-row justify-content-center mt-4">
-				 <input type="email" class="form-control form-control-lg mr-sm-2 mb-2 mb-sm-0" placeholder="Your email address">
-              <a href="#" class="btn btn-lg btn-primary mx-2 mb-2 mb-sm-0">Get Started</a>
+				 <input type="email" class="form-control form-control-lg mr-sm-2 mb-2 mb-sm-0 user-email" placeholder="Your email address">
+              <a href="javascript::void(0)" class="btn btn-lg btn-primary mx-2 mb-2 mb-sm-0 btn-started">Get Started</a>
             </div>
           </div>
         </div>
@@ -362,7 +362,16 @@
     <script type="text/javascript" src="assets/js/theme.js"></script>
     <!-- Removes page load animation when window is finished loading -->
     <script type="text/javascript">
-      window.addEventListener("load", function () {    document.querySelector('body').classList.add('loaded');  });
+      window.addEventListener("load", function () {    
+        document.querySelector('body').classList.add('loaded');  
+        $(".btn-started").click(function(e) {
+          e.preventDefault()
+          if (!$('.user-email').val()) {
+            return
+          }
+          location.href = 'http://app.myavenue.co/signin?' + $('.user-email').val()
+        })
+      });
     </script>
 
   </body>
